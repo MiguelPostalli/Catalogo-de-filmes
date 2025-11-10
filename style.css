@@ -1,0 +1,124 @@
+/* 1. RESET BÁSICO E CONFIGURAÇÕES GLOBAIS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho do elemento */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Fundo Escuro Principal */
+  color: #ffffff; /* Texto Claro */
+  line-height: 1.6; /* Melhora a legibilidade */
+}
+
+a {
+  color: #4db8ff; /* Cor do link (sugestão: azul claro) */
+  text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* 2. HEADER E NAVEGAÇÃO */
+
+.header {
+  background-color: #1f1f1f;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* Fixo no topo */
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #00e0b3; /* Cor de destaque (Verde-água) */
+}
+.nav-menu a {
+margin-left: 20px;
+font-size: 1em;
+transition: color 0.2s;
+}
+.nav-menu a:hover {
+color: #00e0b3;
+}
+.menu-toggle {
+display: none; /* Escondido no desktop */
+background: none;
+border: none;
+}
+.menu-toggle {
+  display: none; /* Escondido no desktop */
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* 3. CONTROLES (Busca e Filtros) */
+
+.controls-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 30px 20px;
+  background-color: #121212;
+  flex-wrap: wrap; /* Permite quebras de linha em telas menores */
+}
+.search-bar {
+  flex-grow: 1;
+  max-width: 400px; /* Limita o tamanho da busca no desktop */
+}
+
+.search-input,
+.filter-dropdown {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #444;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  font-size: 1em;
+  width: 100%;
+}
+
+/* 5. CARDS DE FILMES */
+
+.card-filme {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden; /* Garante que o poster não saia da borda arredondada */
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.card-filme:hover {
+  transform: translateY(-8px); /* Efeito de elevação sutil no hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+.card-filme:hover {
+  transform: translateY(-8px); /* Efeito de elevação sutil no hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.poster-filme {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 2/3; /* Proporção típica de posteres de cinema */
+}
+
+.avaliacao {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
